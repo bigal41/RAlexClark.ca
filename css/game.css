@@ -1,0 +1,17 @@
+
+body {
+    background-color:MidnightBlue;
+}
+.controls, p, .title, div{
+    text-align: center;
+    color: white;
+}
+
+a {
+   color: white;
+}
+
+#canvas {
+    display: block;
+    margin: 0 auto;
+}

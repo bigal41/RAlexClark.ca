@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>        
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/clock.css">
+    </head>
+    <body ng-app="clockApp">
+        <div ng-controller="ClockCtrl as clock">
+            
+            <p class="time">
+					{{clock.time | date:'HH:mm:ss'}}
+            </p>
+        </div>
+        <script src="script/clock.js"></script>
+    </body>
+</html>

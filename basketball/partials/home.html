@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<div class="row">
+        <form class="form-inline col-sm-2 pull-right">
+            <div class="form-group">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="ddlSession2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        {{homectrl.sessionName}}
+                        <span class="caret"></span>
+                    </button>
+                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                         <li ng-repeat="session in homectrl.sessions">
+                             <a ng-click="homectrl.setSession(session)">{{session}}</a>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+	</div>
+    <div class="row" ng-repeat="division in homectrl.divisions">
+        <h1 class="col-sm-2 pull-left"><span class="divisionTitle" ng-click="homectrl.goToDivision( division )">{{division.name}}</span></h1>
+    </div>
+</div>

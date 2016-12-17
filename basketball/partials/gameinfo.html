@@ -1,0 +1,23 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2 col-lg-offset-2" style="text-align: left;">
+			<h1>GAME {{game.gameID}}</h1>
+			
+		</div>
+	</div>
+	<div class="row">
+		
+		<h3>{{game.away}} vs. {{game.home}}</h3>
+		
+	</div>
+	<br/>
+	<br/>
+	<div class="row">
+		<div class="col-lg-6">
+			<div ui-grid="awayStatsOptions" ui-grid-selection class="statsGrid"></div>
+		</div>
+		<div class="col-lg-6">
+			<div ui-grid="homeStatsOptions" ui-grid-selection class="statsGrid"></div>
+		</div>
+	</div>
+</div>
