@@ -1,14 +1,14 @@
 $(function(){
 
 	/////////////////////////////////////
-	//	MEMEBRS 
+	//	MEMEBRS
 	/////////////////////////////////////
 
 	var canvas,ctx,cHeight,cWidth,newDirection,direction,message,score,pixelSize,rate;
-   
+
    var gStart			= false;
    var gPaused			= false;
-   
+
    var snake = [];
    var food = [];
 
@@ -26,14 +26,14 @@ $(function(){
 		if(canvas.getContext)
 		{
 			ctx = canvas.getContext('2d');
-		} 
+		}
 		else
 		{
 			alert("We're sorry but your browser does not support canvas. Please update your browser");
 		}
 	}
-   
-   
+
+
 
 	/**
 	 * -- This  is the initial function, this creates the variables and the movement listeners.
@@ -50,7 +50,7 @@ $(function(){
 		$(document).keydown(function(e){
 			switch(e.which)
 			{
-				case 37: 
+				case 37:
             case 65:
 					if( direction != 'right' )
 						newDirection = 'left';
@@ -74,7 +74,7 @@ $(function(){
             case 13:
 					if( !gStart )
 						startGame();
-					else	
+					else
 						togglePause();
                break;
 				case 80:
@@ -88,7 +88,7 @@ $(function(){
 	}
 
 	/**
-	 * -- This will create an intro screen for the game. 
+	 * -- This will create an intro screen for the game.
 	 * -- It will show the instructions.
 	 */
 	function showIntro()
@@ -107,8 +107,8 @@ $(function(){
 	}
 
 	/**
-	 * -- This is the start function of the game. This creats the snake. 
-	 */ 
+	 * -- This is the start function of the game. This creats the snake.
+	 */
 	function startGame()
 	{
 	  	var x = Math.floor(cWidth/2), y = Math.floor(cHeight/2);
@@ -132,7 +132,7 @@ $(function(){
    /**
     * -- This is the end game function
     */
-   function endGame() 
+   function endGame()
    {
       gStart = false;
       ctx.fillStyle = 'rgba(0,0,0,0.8)';
@@ -145,7 +145,7 @@ $(function(){
       ctx.font = '12px sans-serif';
       ctx.fillText('Score: ' + score, cWidth/2*pixelSize, cHeight/1.5*pixelSize);
    }
-     
+
    /**
     *
     */
@@ -165,9 +165,9 @@ $(function(){
          frame();
       }
    }
-   
+
    /**
-    * -- This function checks for any collisions between objects. 
+    * -- This function checks for any collisions between objects.
     */
    function testCollision(x, y)
    {
@@ -187,33 +187,33 @@ $(function(){
             return true;
          }
       }
-      
-      
+
+
       return false;
    }
-   
+
    /**
     * -- This function generates the new food;
     */
    function genFood()
-   {  
+   {
       var x, y;
       do
       {
          x = Math.floor(Math.random()*(cWidth-1));
          y = Math.floor(Math.random()*(cHeight-1));
       } while( testCollision(x, y));
-      
+
       food = [x,y];
    }
-   
+
    /**
     * -- This draws the snake
     */
    function drawSnake()
    {
       var i, l, x, y;
-      
+
       for(i = 0, l = snake.length; i < l; i++)
       {
          x = snake[i][0];
@@ -223,7 +223,7 @@ $(function(){
          ctx.strokeRect(x*pixelSize, y*pixelSize, pixelSize, pixelSize);
       }
    }
-    
+
    /**
     * -- This draws the food
     */
@@ -233,19 +233,19 @@ $(function(){
       ctx.strokeStyle = "#000";
       ctx.strokeRect(food[0]*pixelSize, food[1]*pixelSize, pixelSize, pixelSize);
    }
-   
+
    /**
     *
     */
-   function frame() 
+   function frame()
    {
       if(!gStart || gPaused)
       {
          return;
       }
-      
+
       var x = snake[0][0], y = snake[0][1];
-      
+
       switch(newDirection)
       {
          case "up":
@@ -261,15 +261,15 @@ $(function(){
             x--;
             break;
       }
-      
+
       if(testCollision(x, y))
       {
          endGame();
          return;
       }
-      
+
       snake.unshift([x,y]);
-      
+
       if(x == food[0] && y == food[1])
       {
          score++;
@@ -279,24 +279,18 @@ $(function(){
       {
          snake.pop();
       }
-      
+
       direction = newDirection;
-      
+
       ctx.fillStyle = '#000';
       ctx.fillRect(0, 0, cWidth*pixelSize, cHeight*pixelSize);
       ctx.fillStyle = '#fff';
       drawFood();
       drawSnake();
-      
+
       setTimeout(frame, rate);
    }
    checkSupported();
    init(50,50,10,75);
-	/**
-	 * -- This creates a each snake piece and adds it to an array
-	 */
-	
-
-
 
 });
