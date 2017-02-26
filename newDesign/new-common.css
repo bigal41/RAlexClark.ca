@@ -1,0 +1,414 @@
+body {
+    overflow-x: hidden;
+
+    color: #777;
+
+    font-family: Droid, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#wrapper {
+  min-height: 350px;
+}
+
+#wrapper header {
+  height: 100%;
+}
+
+.jumbotron-fluid, .container-fluid {
+    padding: 0;
+}
+
+#projects .container-fluid {
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.jumbotron {
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.display-2 {
+    color: #fff;
+
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.learn {
+    color: #fff;
+
+    font-family: 'Lato';
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.bgTO {
+    color: #fff;
+    background: url('../img/toronto_skyline.png');
+}
+
+.bgPlane {
+    color: #fff;
+    background: url('../img/bg_blueplane.png');
+}
+
+.bgTree {
+    color: #fff;
+    background: url('../img/bg_suburb.png');
+}
+
+/* PARALLAX
+-------------------------------------------------*/
+
+.parallax {
+    overflow: hidden;
+
+  height: 100%;
+
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-size: cover;
+}
+
+.parallax-pattern-overlay {
+    height: 100%;
+
+    background-color: rgba(61, 61, 61, 0.48);
+    background-repeat:repeat;
+}
+
+#size-banner {
+    height: 580px;
+    padding-top: 170px;
+}
+
+@charset "utf-8";
+
+@font-face {
+    font-family: OpenSans600;
+
+    src: url(../fonts/OpenSans-Semibold.ttf);
+}
+
+@font-face {
+    font-family: OpenSans800;
+
+    src: url(../fonts/OpenSans-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: ClickerScript;
+
+    src: url(../fonts/ClickerScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: MontserratAlternates;
+
+    src: url(../fonts/MontserratAlternates-Regular.ttf);
+}
+
+@font-face {
+    font-family: Aldrich;
+
+    src: url(../fonts/Aldrich-Regular.ttf);
+}
+
+section {
+	padding: 100px 0;
+
+	background: white;
+}
+
+#experience,#contact {
+   background: gray;
+}
+
+hr {
+    max-width: 300px;
+
+    border-width: 3px;
+    border-color: #09F;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    display: block;
+
+    color: #09F;
+
+    font: 18px Arvo,serif;
+    font-weight: 200;
+}
+
+.hiddenBrand {
+    color: #292b2c;
+    text-shadow: 0 1px 0 rgb(41, 43, 44);
+}
+
+.shownBrand {
+  color: #09F;
+  text-shadow: 0 1px 0 rgba(0,0,0,.9);
+}
+
+.name h1 {
+    float: left;
+
+    margin: 0;
+
+    font-family: OpenSans600,sans-serif;
+    font-weight: 600;
+}
+
+#lastName {
+    font-family: OpenSans800, sans-serif;
+    font-weight: 800;
+}
+
+#desc {
+    font-family: ClickerScript;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a.nav-link.anchor-scroll.active {
+    color: #0099ff!important;
+}
+
+.inet{
+	text-decoration: none;
+
+	color: black;
+
+	font-weight: bolder;
+}
+
+.resume {
+	float: right;
+
+	margin-top: 2.5%;
+	margin-right: 10%
+}
+
+.btn-resume {
+	color: white;
+	background: #09F;
+}
+
+.btn-resume:hover {
+	color: white;
+	background: #007acc;
+}
+
+.languages > h2,
+.frameworks > h2 {
+   z-index: 2;
+
+	text-align: center;
+
+   color: #1c1c1c;
+
+	font: 1.5em Arvo,serif;
+   font-weight: 700;
+}
+
+.project-square{
+	text-align: center;
+
+	border: 1px solid white;
+	background: white;
+}
+
+.overlay{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	display: none;
+
+	width: 100%;
+	height: 100%;
+}
+
+.project-square:hover .overlay {
+	display: block;
+
+	opacity: 0.75;
+	background-color: black;
+}
+
+.project-desc {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+
+    width: 100%;
+	 padding: 0 .5em;
+
+    text-align: left;
+
+    font-family: Arvo, sans-serif;
+}
+
+.project-desc a {
+	text-decoration: underline;
+
+	color: darkgoldenrod;
+
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.project-desc .description {
+    height: 3em;
+
+    color: white;
+}
+
+.img-responsive
+{
+    display: inline;
+
+    height: 16em;
+}
+
+/*CONTACT FORM*/
+
+.contact-form .custom-input,
+.contact-form .custom-ta {
+    margin-bottom: 20px;
+    padding: 10px;
+
+    color: black;
+    border: none;
+    border: 1.5px solid rgb(0, 153, 255);
+    border-radius: 2px;
+    outline: none;
+    background-color: rgb(245,245,245);
+
+    font-family: Aldrich;
+    font-size: 20px;
+
+    -webkit-appearance: none;
+
+}
+
+.contact-form .custom-input {
+    width: 100%;
+
+}
+
+.contact-form .custom-ta {
+    width: 100%;
+    height: 260px;
+
+    resize: none;
+
+}
+
+.contact-form .custom-input:focus,
+.contact-form .custom-ta:focus{
+    border: 1.5px solid #E0710A;
+}
+
+.custom_btn {
+    width: 100%;
+    height: 56px;
+
+    color: white;
+    border-radius: 2px;
+    background-color: rgb(0, 153, 255);
+
+    font-family: Aldrich;
+    font-size: 21px;
+}
+
+.custom_btn:hover {
+    background-color: orange;
+}
+
+.social {
+	float: right;
+
+	margin-right: 1%
+}
+
+.social a {
+	margin: 0;
+
+	color: #fff;
+}
+
+.round-icon {
+	display: inline-block!important;
+
+	width: 65px;
+	height: 65px;
+	margin: 15px 3px;
+
+	text-align: center;
+	vertical-align: middle;
+
+	border-radius: 50%;
+	background: #09f;
+
+	font-size: 36px!important;
+	line-height: 63px!important;
+
+}
+
+.round-icon:hover {
+	background: #007acc;
+
+}
+
+.social-border {
+   color: #FFF;
+	border: 2px solid #FFF;
+}
+
+.section-heading,
+.subheading {
+   z-index: 2;
+
+   display: inline-block;
+
+   padding-right: 5px;
+   padding-left: 5px;
+
+   color: #232323;
+
+	font: 3em Arvo,serif;
+   font-weight: 700;
+   line-height: .66666666em;
+}
+
+.white { color: white; }
+
+.card-block{ color: black; }
+
+.subheading {
+	font: 2.5em Arvo,serif;
+   font-weight: 700;
+}
+
+.skills {
+	margin-top: 5%;
+
+	text-align: center;
+}
