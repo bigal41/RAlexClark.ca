@@ -1,5 +1,5 @@
 function DivisionCtrl( $http, $scope ) {
-	//http://plnkr.co/edit/?p=preview	
+	//https://plnkr.co/edit/?p=preview	
 	
 	//MEMBERS
 //	var teamsRequest, statsRequest;

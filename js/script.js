@@ -52,7 +52,7 @@ contactform.submit(function(e) {
 
     if (re.test($('#contactEmail').val()) && name.test($('#contactName').val()) && $('#contactMessage').val().length > 0) {
         $.ajax({
-            url: '//formspree.io/ralexclark@ralexclark.ca',
+            url: '//formspree.io/ralexclark@outlook.com',
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
@@ -63,7 +63,7 @@ contactform.submit(function(e) {
                 toastr.success('Thanks for the email, will be in touch promptly.');
             },
             error: function(err) {
-                toastr.error('Ops, there was an error.');
+                toastr.error('Oops, there was an error.');
             }
 
         });
