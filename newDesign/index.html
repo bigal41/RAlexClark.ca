@@ -5,9 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet"href="../css/timeline.css">
     <link rel="stylesheet"href="new-common.css">
@@ -19,28 +23,28 @@
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'>
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,700,900'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <title>New Website Design</title>
 </head>
 
 <body>
-
     <div class="wrapper" id="wrapper">
         <header>
             <div class="jumbotron jumbotron-fluid" id="banner">
-                <div class="parallax text-center bgTO">
+                <div class="ra-parallax text-center bgTO">
                     <div class="parallax-pattern-overlay">
                         <div class="container text-center" id="size-banner">
                             <h2 class="display-2">R. Alex Clark</h2>
-                            <h3 class="learn">Software developer from Brampton.</h3>
+                            <h3 class="learn">Software developer from the Greater Toronto Area.</h3>
+                            <div><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
     </div>
-
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" data-toggle="affix">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler">
           <span class="navbar-toggler-icon"></span>
@@ -74,14 +78,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">ABOUT</h2>
+                        <h2 class="section-heading ra-black">ABOUT</h2>
                     </div>
                 </div>
                 <hr class="primary">
                 <div class="row">
                     <p class="col-lg-8 col-lg-offset-2">
-                        My name is Alex Clark and I am a software developer currently living in Mississauga, Ontario. I attended Carleton University and earned a bachelor's degree in Computer Science with a minor in Statistics.
-                        <br/> I am currently working at <a class="inet" href="https://www.inetpublicsafety.com">iNet Public Safety</a> as a software developer.
+                        My name is Alex Clark and I am a software developer currently living in Brampton, Ontario. I attended Carleton University and earned a bachelor's degree in Computer Science with a minor in Statistics.
+                        <br/> I am currently working at <a class="inet" href="https://www.veriday.com">Veridy Inc.</a> as a software developer.
                     </p>
                 </div>
             </div>
@@ -90,7 +94,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="section-heading">EXPERIENCE</h1>
+                        <h1 class="section-heading ra-black">EXPERIENCE</h1>
                     </div>
                 </div>
                 <hr class="primary">
@@ -157,7 +161,7 @@
             <div class="container-fluid skills">
                 <div class="row">
                     <div class="col-lg-4 col-lg-offset-4">
-                        <h2 class="subheading">Skills</h2>
+                        <h2 class="subheading ra-black">Skills</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -176,12 +180,12 @@
         <div class="wrapper" id="projects">
             <header>
                 <div class="jumbotron jumbotron-fluid" id="banner">
-                    <div class="parallax text-center bgTO">
+                    <div class="ra-parallax text-center bgTO">
                         <div class="parallax-pattern-overlay">
-                            <div class="container-fluid text-center" id="size-banner">
+                            <div class="container-fluid text-center" id="size-banner-projects">
                               <div class="row">
                                   <div class="col-lg-12 text-center">
-                                      <h2 class="section-heading white">PROJECTS</h2>
+                                      <h2 class="section-heading ra-white">PROJECTS</h2>
                                   </div>
                               </div>
                               <hr class="primary">
@@ -230,7 +234,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">CONTACT</h2>
+                        <h2 class="section-heading ra-black">CONTACT</h2>
                     </div>
                 </div>
                 <hr class="primary">
@@ -240,7 +244,7 @@
                             <input class="custom-input" id="contactName" name="name" placeholder="Name">
                         </div>
                         <div class="input-wrapper col-lg-4">
-                            <input class="col custom-input" id="contactEmail" name="_replyto" placeholder="Email">
+                            <input class="custom-input" id="contactEmail" name="_replyto" placeholder="Email">
                             <input type="text" name="_gotcha" style="display:none" />
                             <input type="hidden" name="_subject" value="New Inquiry!" />
                         </div>
@@ -257,12 +261,25 @@
                     </div>
                 </form>
             </div>
-            <div class="social">
+            <div class="social" hidden>
                 <a href="mailto://ralexclark@ralexclark.ca"><i class="fa fa-envelope round-icon social-border"></i></a>
                 <a href="https://twitter.com/ralexclark"><i class="fa fa-twitter round-icon social-border"></i></a>
                 <a href="https://www.linkedin.com/in/robert-alex-clark-5a5a6971"><i class="fa fa-linkedin round-icon social-border"></i></a>
                 <a href="https://github.com/bigal41"><i class="fa fa-github round-icon social-border"></i></a>
             </div>
+
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large ra-blue">
+                    <i class="large material-icons">people</i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating ra-orange" href="mailto://ralexclark@ralexclark.ca" ><i class="fa fa-envelope"></i></a></li>
+                    <li><a class="btn-floating ra-orange" href="https://twitter.com/ralexclark" ><i class="fa fa-twitter "></i></a></li>
+                    <li><a class="btn-floating ra-orange" href="https://www.linkedin.com/in/robert-alex-clark-5a5a6971" ><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="btn-floating ra-orange" href="https://github.com/bigal41" ><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+
         </section>
     </div>
 
@@ -275,6 +292,10 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
 
     <script src="../js/wow.min.js"></script>
 

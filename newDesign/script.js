@@ -54,9 +54,13 @@ $(window).scroll(function() {
     for (var i = 0; i < aArray.length; i++) {
         var theID = aArray[i];
         var divPos = $(theID).offset().top; // get the offset of the div from the top of page
-        var divHeight = $(theID).height() + Number($(theID).css('padding-bottom').replace('px','')) + + Number($(theID).css('padding-top').replace('px','')); // get the height of the div in question
+        var divHeight = $(theID).height() + Number($(theID).css('padding-bottom').replace('px','')) + Number($(theID).css('padding-top').replace('px','')); // get the height of the div in question
         if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
             $("a[href='" + theID + "']").addClass("active");
+            if( theID === '#about' )
+            {
+                $('#brand-name').removeClass("hiddenBrand").addClass("shownBrand").fadeIn(1000);
+            }
         } else {
             $("a[href='" + theID + "']").removeClass("active");
         }
@@ -86,10 +90,10 @@ $('[data-toggle="affix"]').each(function() {
 })
 
 $(window).on('resize', function() {
-    $('#wrapper').css('height', $(window).height() - 85);
+    $('#wrapper').css('height', $(window).height());
 });
 
-$('#wrapper').css('height', $(window).height() - 85);
+$('#wrapper').css('height', $(window).height());
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {

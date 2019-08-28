@@ -8,3 +8,11 @@ basketball/data/register.php
 connection.php
 
 resume/Resume.pdf
+
+node_modules
+
+.idea
+
+gulpfile.js
+
+package.json
