@@ -1,0 +1,29 @@
+#size-banner, #size-banner-projects {
+  height: 580px;
+}
+
+#size-banner {
+  padding-top: 18em;
+}
+
+#size-banner-projects {
+  padding-top: 8em;
+}
+
+.display-2 {
+    color: #fff;
+
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.learn {
+    color: #fff;
+
+    font-family: 'Lato';
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.4;
+}
